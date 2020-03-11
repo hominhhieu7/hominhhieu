@@ -1,115 +1,72 @@
 import Head from 'next/head';
 import React from 'react';
-import { Menu } from 'antd';
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from '@ant-design/icons';
+import { Layout } from 'antd';
+import Top from '../components/Top';
+import Footers from '../components/Footers';
 
-const { SubMenu } = Menu;
+const { Header, Footer, Content } = Layout;
 
 export default class Home extends React.Component {
-  state = {
-    current: 'mail',
-  };
 
-  handleClick = e => {
-    console.log('click ', e);
-    this.setState({
-      current: e.key,
-    });
-  };
 
   render() {
     return (
-      <div className="container">
+      <div>
         <Head>
           <title>Ho Minh Hieu</title>
-          <link rel="icon" href="/hominhhieu.ico" />
+          {/* <link rel="icon" href="/hominhhieu.ico" /> */}
         </Head>
-        <header>
-          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-            <Menu.Item key="mail">
-              <MailOutlined />
-          Navigation One
-        </Menu.Item>
-            <Menu.Item key="app" disabled>
-              <AppstoreOutlined />
-          Navigation Two
-        </Menu.Item>
-            <SubMenu
-              title={
-                <span className="submenu-title-wrapper">
-                  <SettingOutlined />
-              Navigation Three - Submenu
-            </span>
-              }
-            >
-              <Menu.ItemGroup title="Item 1">
-                <Menu.Item key="setting:1">Option 1</Menu.Item>
-                <Menu.Item key="setting:2">Option 2</Menu.Item>
-              </Menu.ItemGroup>
-              <Menu.ItemGroup title="Item 2">
-                <Menu.Item key="setting:3">Option 3</Menu.Item>
-                <Menu.Item key="setting:4">Option 4</Menu.Item>
-              </Menu.ItemGroup>
-            </SubMenu>
-            <Menu.Item key="alipay">
-              <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-                Navigation Four - Link
-          </a>
-            </Menu.Item>
-          </Menu>
-        </header>
-        <main>
-          <h1 className="title">
-            Hi! I'm Hieu
+        <Layout>
+          <Header style={{ backgroundColor: "#ffffff" }}>
+            <Top />
+          </Header>
+          <Content>
+            <div className="container">
+              <img className="hero" src="./IMG_4803.JPG" />
+              <h1 className="title">
+                Hi! I'm Hieu.
           </h1>
-          <p className="description">
-            Get started by editing <code>pages/index.js</code>
+              <p className="description">
+                <code>Front-end Developer</code>
+              </p>
+
+              <div className="grid">
+                <a href="https://nextjs.org/docs" className="card">
+                  <h3>Documentation &rarr;</h3>
+                  <p>Find in-depth information about Next.js features and API.</p>
+                </a>
+
+                <a href="https://nextjs.org/learn" className="card">
+                  <h3>Learn &rarr;</h3>
+                  <p>Learn about Next.js in an interactive course with quizzes!</p>
+                </a>
+
+                <a
+                  href="https://github.com/zeit/next.js/tree/master/examples"
+                  className="card"
+                >
+                  <h3>Examples &rarr;</h3>
+                  <p>Discover and deploy boilerplate example Next.js projects.</p>
+                </a>
+
+                <a
+                  href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                  className="card"
+                >
+                  <h3>Deploy &rarr;</h3>
+                  <p>
+                    Instantly deploy your Next.js site to a public URL with ZEIT Now.
           </p>
-
-          <div className="grid">
-            <a href="https://nextjs.org/docs" className="card">
-              <h3>Documentation &rarr;</h3>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-
-            <a href="https://nextjs.org/learn" className="card">
-              <h3>Learn &rarr;</h3>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
-
-            <a
-              href="https://github.com/zeit/next.js/tree/master/examples"
-              className="card"
-            >
-              <h3>Examples &rarr;</h3>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-
-            <a
-              href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className="card"
-            >
-              <h3>Deploy &rarr;</h3>
-              <p>
-                Instantly deploy your Next.js site to a public URL with ZEIT Now.
-          </p>
-            </a>
-          </div>
-        </main>
-
-        <footer>
-          <a
-            href="#"
-            rel="noopener noreferrer"
-          >
-            Design by <img src="/hominhhieu.ico" alt="Hieu Logo" />
-            <img alt="ant" src="/ant.svg" />
-          </a>
-        </footer>
+                </a>
+              </div>
+            </div>
+          </Content>
+          <Footer style={{ borderTop: "1px solid #eaeaea", backgroundColor: "#FFFF", padding: "0px" }}>
+            <footer>
+              <Footers />
+            </footer>
+          </Footer>
+        </Layout>
 
         <style jsx>{`
       .container {
@@ -133,7 +90,6 @@ export default class Home extends React.Component {
       footer {
         width: 100%;
         height: 100px;
-        border-top: 1px solid #eaeaea;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -164,7 +120,11 @@ export default class Home extends React.Component {
       .title a:active {
         text-decoration: underline;
       }
-
+      .hero{
+        border-radius: 50%;
+        width: 250x;
+        height: 250px;
+      }
       .title {
         margin: 0;
         line-height: 1.15;
