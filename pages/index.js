@@ -1,63 +1,117 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import React from 'react';
+import { Menu } from 'antd';
+import {
+  MailOutlined,
+  AppstoreOutlined,
+  SettingOutlined,
+} from '@ant-design/icons';
 
-const Home = () => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+const { SubMenu } = Menu;
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+export default class Home extends React.Component {
+  state = {
+    current: 'mail',
+  };
 
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
+  handleClick = e => {
+    console.log('click ', e);
+    this.setState({
+      current: e.key,
+    });
+  };
 
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
+  render() {
+    return (
+      <div className="container">
+        <Head>
+          <title>Ho Minh Hieu</title>
+          <link rel="icon" href="/hominhhieu.ico" />
+        </Head>
+        <header>
+          <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+            <Menu.Item key="mail">
+              <MailOutlined />
+          Navigation One
+        </Menu.Item>
+            <Menu.Item key="app" disabled>
+              <AppstoreOutlined />
+          Navigation Two
+        </Menu.Item>
+            <SubMenu
+              title={
+                <span className="submenu-title-wrapper">
+                  <SettingOutlined />
+              Navigation Three - Submenu
+            </span>
+              }
+            >
+              <Menu.ItemGroup title="Item 1">
+                <Menu.Item key="setting:1">Option 1</Menu.Item>
+                <Menu.Item key="setting:2">Option 2</Menu.Item>
+              </Menu.ItemGroup>
+              <Menu.ItemGroup title="Item 2">
+                <Menu.Item key="setting:3">Option 3</Menu.Item>
+                <Menu.Item key="setting:4">Option 4</Menu.Item>
+              </Menu.ItemGroup>
+            </SubMenu>
+            <Menu.Item key="alipay">
+              <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+                Navigation Four - Link
+          </a>
+            </Menu.Item>
+          </Menu>
+        </header>
+        <main>
+          <h1 className="title">
+            Hi! I'm Hieu
+          </h1>
+          <p className="description">
+            Get started by editing <code>pages/index.js</code>
           </p>
-        </a>
-      </div>
-    </main>
 
-    <footer>
-      <a
-        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-      </a>
-    </footer>
+          <div className="grid">
+            <a href="https://nextjs.org/docs" className="card">
+              <h3>Documentation &rarr;</h3>
+              <p>Find in-depth information about Next.js features and API.</p>
+            </a>
 
-    <style jsx>{`
+            <a href="https://nextjs.org/learn" className="card">
+              <h3>Learn &rarr;</h3>
+              <p>Learn about Next.js in an interactive course with quizzes!</p>
+            </a>
+
+            <a
+              href="https://github.com/zeit/next.js/tree/master/examples"
+              className="card"
+            >
+              <h3>Examples &rarr;</h3>
+              <p>Discover and deploy boilerplate example Next.js projects.</p>
+            </a>
+
+            <a
+              href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              className="card"
+            >
+              <h3>Deploy &rarr;</h3>
+              <p>
+                Instantly deploy your Next.js site to a public URL with ZEIT Now.
+          </p>
+            </a>
+          </div>
+        </main>
+
+        <footer>
+          <a
+            href="#"
+            rel="noopener noreferrer"
+          >
+            Design by <img src="/hominhhieu.ico" alt="Hieu Logo" />
+            <img alt="ant" src="/ant.svg" />
+          </a>
+        </footer>
+
+        <style jsx>{`
       .container {
         min-height: 100vh;
         padding: 0 0.5rem;
@@ -184,7 +238,7 @@ const Home = () => (
       }
     `}</style>
 
-    <style jsx global>{`
+        <style jsx global>{`
       html,
       body {
         padding: 0;
@@ -197,7 +251,7 @@ const Home = () => (
         box-sizing: border-box;
       }
     `}</style>
-  </div>
-)
-
-export default Home
+      </div>
+    )
+  }
+}
