@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import Layouts from '../components/Layout';
 
 export default class About extends Component {
     render() {
         return (
-            <div>
-                This is the about page.
+            <Layouts>
+                <div>
+                    This is the about page.
             </div>
+            </Layouts>
         )
     }
 }
