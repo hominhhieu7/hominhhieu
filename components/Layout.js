@@ -3,7 +3,6 @@ import React from 'react';
 import { Layout } from 'antd';
 import Top from './Top';
 import Footers from './Footers';
-
 const { Header, Footer, Content } = Layout;
 
 export default class Layouts extends React.Component {

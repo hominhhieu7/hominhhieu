@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Row, Col } from 'antd';
 import {
+    ContactsOutlined,
     LoadingOutlined,
     InfoCircleTwoTone,
     GithubOutlined,
@@ -12,7 +13,7 @@ const { SubMenu } = Menu;
 
 export default class Top extends Component {
     state = {
-        current: 'mail',
+        current: '',
     };
 
     handleClick = e => {
@@ -26,7 +27,7 @@ export default class Top extends Component {
             <div>
                 <Row>
                     <Col span={2}>
-                        <Link  href="/">
+                        <Link href="/">
                             <a>
                                 <h1>
                                     Hieu
@@ -36,12 +37,20 @@ export default class Top extends Component {
                     </Col>
                     <Col span={16} offset={4}>
                         <Menu style={{ lineHeight: "63px" }} onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                            <Menu.Item key="infor">
+                            <Menu.Item key="about">
                                 <Link href="/about">
                                     <a>
                                         <InfoCircleTwoTone style={{ paddingRight: "10px" }} />
                                 About Me
                                 </a>
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key="contact">
+                                <Link href="/contact">
+                                    <a>
+                                        <ContactsOutlined style={{ paddingRight: "10px" }} />
+                                            Contact
+                                    </a>
                                 </Link>
                             </Menu.Item>
                             <Menu.Item key="github">
