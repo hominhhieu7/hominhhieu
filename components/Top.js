@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Row, Col } from 'antd';
 import {
+    LoadingOutlined,
     InfoCircleTwoTone,
     GithubOutlined,
     NotificationFilled,
@@ -24,16 +25,16 @@ export default class Top extends Component {
         return (
             <div>
                 <Row>
-                    <Col span={1}>
+                    <Col span={2}>
                         <Link  href="/">
                             <a>
-                                <h2>
+                                <h1>
                                     Hieu
-                                </h2>
+                                </h1>
                             </a>
                         </Link>
                     </Col>
-                    <Col span={16} offset={5}>
+                    <Col span={16} offset={4}>
                         <Menu style={{ lineHeight: "63px" }} onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
                             <Menu.Item key="infor">
                                 <Link href="/about">
@@ -53,10 +54,10 @@ export default class Top extends Component {
                                 title={
                                     <span className="submenu-title-wrapper">
                                         <NotificationFilled />
-                                            My Blog
+                                            Blog
                                     </span>}>
-                                <Menu.Item key="setting:1">Coming soon</Menu.Item>
-                                <Menu.Item key="setting:2">Coming soon</Menu.Item>
+                                <Menu.Item key="setting:1"> <LoadingOutlined />Coming soon</Menu.Item>
+                                <Menu.Item key="setting:2"> <LoadingOutlined />Coming soon</Menu.Item>
                             </SubMenu>
                         </Menu>
                     </Col>

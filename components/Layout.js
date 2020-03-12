@@ -21,7 +21,9 @@ export default class Layouts extends React.Component {
             <Top />
           </Header>
           <Content>
+          <div className="container">
             {this.props.children}
+          </div>
           </Content>
           <Footer style={{ borderTop: "1px solid #eaeaea", backgroundColor: "#FFFF", padding: "0px" }}>
             <footer>
@@ -46,7 +48,16 @@ export default class Layouts extends React.Component {
         display: flex;
         justify-content: center;
         align-items: center;
-      }`}
+      }
+      .container {
+        min-height: 80vh;
+        padding: 0 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      `}
         </style>
       </div>
     )
