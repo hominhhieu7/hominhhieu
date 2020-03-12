@@ -9,7 +9,9 @@ export default class Footers extends Component {
                     rel="noopener noreferrer"
                 >
                     Design by Ho Minh Hieu
-                    <img alt="ant" src="/ant.svg" style={{ padding: "0px 10px 0px 10px" }} />
+                    <img alt="ant" src="/ant.svg" style={{ padding: "0px 10px" }} />
+                    <img alt="ant" src="/next-js.svg" style={{ padding: "0px 10px" }} />
+                    <img alt="ant" src="/reactjs.svg" style={{ padding: "0px 10px" }} />
                 </a>
                 <style jsx>
                     {`

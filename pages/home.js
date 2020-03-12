@@ -6,7 +6,7 @@ export default class Home extends Component {
             <>
                 <img className="hero" src="./IMG_4803.JPG" />
                 <h1 className="title">
-                    Hi! I'm Hieu.
+                    Hello! I'm Hieu.
           </h1>
                 <p className="description">
                     <code>Front-end, Back-end Developer</code>
