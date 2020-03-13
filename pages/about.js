@@ -22,7 +22,7 @@ export default class About extends Component {
                             <span>ReacJs,Redux: </span> <Rate allowHalf disabled defaultValue={3} />
                         </Col>
                         <Col>
-                           
+
                         </Col>
                         <Col>
                             <span>Mongodb, Mysql: </span> <Rate allowHalf disabled defaultValue={3} />
