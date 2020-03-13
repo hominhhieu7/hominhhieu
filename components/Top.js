@@ -45,14 +45,6 @@ export default class Top extends Component {
                                 </a>
                                 </Link>
                             </Menu.Item>
-                            <Menu.Item key="contact">
-                                <Link href="/contact">
-                                    <a>
-                                        <ContactsOutlined style={{ paddingRight: "10px" }} />
-                                            Contact
-                                    </a>
-                                </Link>
-                            </Menu.Item>
                             <Menu.Item key="github">
                                 <a href="https://github.com/hominhhieu7" target="_blank">
                                     <GithubOutlined style={{ paddingRight: "10px" }} />

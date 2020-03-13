@@ -19,7 +19,7 @@ export default class Layouts extends React.Component {
           <Header style={{ backgroundColor: "#ffffff" }}>
             <Top />
           </Header>
-          <Content>
+          <Content style={{backgroundColor: '#dbdee2'}}>
           <div className="container">
             {this.props.children}
           </div>
