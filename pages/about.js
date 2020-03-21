@@ -8,7 +8,7 @@ export default class About extends Component {
                 <img className="hero" src="./IMG_4803.JPG" />
                 <div className="descript">
                     <h4>
-                        Hi again! My fullname is Ho Minh Hieu, I'm a Front-end, Back-end Developer.
+                        Hi again! My fullname is Ho Minh Hieu, I'm Javascript Developer.
                         I only 6 month working. However you can check <a style={{ color: '#184aff' }} target="_blank" href="https://github.com/hominhhieu7?tab=repositories">My github. </a>
                          I have some project.
                     </h4>

@@ -9,7 +9,7 @@ export default class Home extends Component {
                     Hello! I'm Hieu.
           </h1>
                 <p className="description">
-                    <code>Front-end, Back-end Developer</code>
+                    <code>Javascript Developer</code>
                 </p>
 
                 <div className="grid">
