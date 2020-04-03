@@ -1,33 +1,33 @@
 import React, { Component } from 'react';
 
 export default class Home extends Component {
-    render() {
-        return (
-            <>
-                <img className="hero" src="./IMG_4803.JPG" />
-                <h1 className="title">
-                    Hello! I'm Hieu.
-          </h1>
-                <p className="description">
-                    <code>Javascript Developer</code>
-                </p>
+  render() {
+    return (
+      <>
+        <img className="hero" src="./IMG_4803.JPG" />
+        <h1 className="title">
+          Hello! I'm Hieu.
+                </h1>
+        <p className="description">
+          <code>Javascript Developer</code>
+        </p>
 
-                <div className="grid">
-                    <div className="card" >
-                        <h3>
-                            Seeking position of a Website Developer where I would be able to put to use the knowledge gained in the
-                            software development cycle and technical aptitude.
-
-                  </h3>
-                    </div>
-                    <div className="card" >
-                        <h3>
-                        Knowledge basic of modern frameworks and technologies, e.g., React.js(Redux), Node.js, MongoDB, Express.js.
+        <div className="grid">
+          <div className="card" >
+            <h3>
+              Seeking position of a Website Developer where I would be able to put to use the knowledge gained in the
+              software development cycle and technical aptitude.
 
                   </h3>
-                    </div>
-                </div>
-                <style jsx>{`
+          </div>
+          <div className="card" >
+            <h3>
+              Knowledge basic of modern frameworks and technologies, e.g., React.js(Redux), Node.js, MongoDB, Express.js.
+
+                  </h3>
+          </div>
+        </div>
+        <style jsx>{`
       .hero{
         border-radius: 50%;
         width: 250x;
@@ -96,7 +96,7 @@ export default class Home extends Component {
       }
     `}</style>
 
-                <style jsx global>{`
+        <style jsx global>{`
       html,
       body {
         padding: 0;
@@ -109,7 +109,7 @@ export default class Home extends Component {
         box-sizing: border-box;
       }
     `}</style>
-            </>
-        )
-    }
+      </>
+    )
+  }
 }

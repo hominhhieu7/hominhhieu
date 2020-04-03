@@ -6,6 +6,7 @@ import {
     InfoCircleTwoTone,
     GithubOutlined,
     NotificationFilled,
+    HomeOutlined
 } from '@ant-design/icons';
 import Link from 'next/link'
 
@@ -37,6 +38,14 @@ export default class Top extends Component {
                     </Col>
                     <Col span={16} offset={4}>
                         <Menu style={{ lineHeight: "63px" }} onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                        <Menu.Item key="home">
+                                <Link href="/">
+                                    <a>
+                                        <HomeOutlined style={{ paddingRight: "10px" }} />
+                                Home
+                                </a>
+                                </Link>
+                            </Menu.Item>
                             <Menu.Item key="about">
                                 <Link href="/about">
                                     <a>

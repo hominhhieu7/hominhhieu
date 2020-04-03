@@ -22,12 +22,12 @@ export default class About extends Component {
                             <span>ReacJs,Redux: </span> <Rate allowHalf disabled defaultValue={3} />
                         </Col>
                         <Col>
-
+                            <span>Nodejs, ExpressJs: </span> <Rate allowHalf disabled defaultValue={3} />
                         </Col>
                         <Col>
-                            <span>Mongodb, Mysql: </span> <Rate allowHalf disabled defaultValue={3} />
+                            <span>Mongodb, Mysql: </span> <Rate allowHalf disabled defaultValue={2.5} />
                         </Col>
-                    </Row> <span>Nodejs, ExpressJs: </span> <Rate allowHalf disabled defaultValue={3} />
+                    </Row>
                 </div>
                 <div>
                     <Timeline pending="Finding job..." reverse={false} mode="left" style={{ width: "310px", lineHeight: '2' }}>
