@@ -14,6 +14,7 @@ export default class Layouts extends React.Component {
         <Head>
           <title>Ho Minh Hieu</title>
           <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/railscasts.css" />
+          <link rel="stylesheet" type="text/css" href="/nprogress.css" />
           {/* <link rel="icon" href="/hominhhieu.ico" /> */}
         </Head>
         <Layout>
