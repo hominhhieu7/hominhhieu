@@ -22,7 +22,7 @@ export default class Home extends Component {
           </div>
           <div className="card" >
             <h3>
-              Knowledge basic of modern frameworks and technologies, e.g., React.js(Redux), Node.js, MongoDB, Express.js.
+              Knowledge basic of modern frameworks and technologies, e.g., React.js, Node.js, MongoDB, Express.js.
 
                   </h3>
           </div>

@@ -18,7 +18,6 @@ export default class Top extends Component {
     };
 
     handleClick = e => {
-        console.log('click ', e);
         this.setState({
             current: e.key,
         });

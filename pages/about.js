@@ -19,7 +19,7 @@ export default class About extends Component {
                     </h2>
                     <Row>
                         <Col>
-                            <span>ReacJs,Redux: </span> <Rate allowHalf disabled defaultValue={3} />
+                            <span>ReacJs: </span> <Rate allowHalf disabled defaultValue={3} />
                         </Col>
                         <Col>
                             <span>Nodejs, ExpressJs: </span> <Rate allowHalf disabled defaultValue={3} />
