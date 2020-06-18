@@ -30,7 +30,8 @@ export default class About extends Component {
                     </Row>
                 </div>
                 <div>
-                    <Timeline pending="Finding job..." reverse={false} mode="left" style={{ width: "310px", lineHeight: '2' }}>
+                    {/* pending="Finding job..." reverse={false} */}
+                    <Timeline mode="left" style={{ width: "310px", lineHeight: '2' }}>
                         <Timeline.Item label="08/2015" >Study in Thu Dau Mot University</Timeline.Item>
                         <Timeline.Item label="06/2018 - 08/2018">Internship in Netco Post.</Timeline.Item>
                         <Timeline.Item label="08/2018 - 12/2018">Web deisgn in Smartlog(SEM).</Timeline.Item>
@@ -38,6 +39,7 @@ export default class About extends Component {
                         <Timeline.Item label="05/2019">Created app using React + Redux.</Timeline.Item>
                         <Timeline.Item label="06/2019">Learning Nodejs, Express.js, MongoDB</Timeline.Item>
                         <Timeline.Item label="12/2019"> Graduated from Thu Dau Mot University</Timeline.Item>
+                        <Timeline.Item label="05/2020"> Back-end Developer in FPT TELECOM</Timeline.Item>
                     </Timeline>
                 </div>
                 <style jsx>
